@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<!-- 
+hidden 객체 : 화면에 노출되지 않지만 내부적으로 value값을 서버로 넘김
+readonly 속성 : 입력 양식을 수정할 수 없도록 비활성화, value값을 서버로 넘김
+disabled 속성 : 입력 양식을 수정할 수 없도록 비활성화, value값을 서버로 넘기지 않음
+ -->
+ 
+<body>
+	<form action="hidden.jsp">
+		<input type="hidden" name="myid" value="myid"><br> <!-- hidden은 화면에 표시 안됨 -->
+		<input type="text" name="myid01" value="myid01" readonly><br> <!-- 서버로 값이 안넘어간다 --> 
+		<input type="text" name="myid02" value="myid02" disabled><br> <!-- 서버로 값이 넘어간다 -->
+		
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

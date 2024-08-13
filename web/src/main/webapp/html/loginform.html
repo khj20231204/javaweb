@@ -9,15 +9,21 @@
 method : 값을 전달하는 방식을 설정하는 속성
 action : 값이 전달될 파일명을 설정
  -->
-	<form method="post" action="login.jsp">
-	
-	<table border="1" width="350px" align="center">
+	<form method="post" action="login.jsp">	
+	<table border="1" width="400px" align="center">
 	<caption>로그인</caption>
 		<tr>
 			<th>ID</th>
-			<td><input type="text" size="40" maxlength="10" autofocus></td>
+			<td><input type="text" size="20" maxlength="10" id="id" name="id" autofocus></td>
 		<tr>
-	</table>
+		<tr>
+			<th>비밀번호</th>
+			<td><input type="password" size="20" maxlength="10" id="passwd" name="passwd" autofocus></td>
+		<tr>
+		<tr>
+			<td colspan="2" align="center" value="로그인"><input type="submit" value="취소">&nbsp;&nbsp;<input type="reset"></td>
+		</tr>
+	</table>	
 	</form>
 </body>
 </html>
