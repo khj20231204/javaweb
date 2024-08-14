@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+p {
+	color: pink;
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link	{font-size:15px; color:black;}
+a:hover	{font-size:20px; color:yellow; text-decoration:underline;}
+a:active{font-size:20px; color:red;}
+a:visited{font-size:10px; color:green;}
