@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	아이디 : <input type="text" id="id" onfocus="id_focus()" onblur="id_blur()" defaultValue="아이디 입력">
+	<br>
+	비밀번호 : <input type="text" id="passwd" onfocus="pw_focus()" onblur="pw_blur()">
+	
+	<script>
+		function id_focus(){
+			//console.log("id_focus");
+			var id = document.getElementById("id");
+			console.log(id.defaultValue);
+			if(id.value = "아이디 입력"){
+				id.value = "";
+			}else{
+				//id.value = id.defaultValue;
+			}
+		}
+		
+		function pw_focus(){
+			console.log("pw_focus");
+		}
+		
+		function id_blur(){
+			//console.log("id_blur");
+			var id = document.getElementById("id");
+			console.log(id.value);
+			
+			/*
+			if(id.value == ""){
+				id.value = "아이디 입력"
+			}else{
+				id.value = id.defaultValue;
+			}*/
+		}
+		
+		function pw_blur(){
+			console.log("pw_blur");
+		}
+	</script>
+</body>
+</html>
