@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1 id="header">Header</h1>
+
+	<h2>h2_1</h2>
+	<h2>h2_2</h2>
+	<h2>h2_3</h2>
+	
+	<h3>h3_1</h3>
+	<h3>h3_2</h3>
+	<h3>h3_3</h3>
+	
+	<script>
+		window.onload = function(){
+			
+			//getElementById 1개 값 반환
+			var header = document.getElementById("header");
+			
+			header.style.backgroundColor = "red";
+			header.style.color = "white";
+			
+			//querySelector 1개 값 반환
+			var h = document.querySelector("h2");	//h2태그 중 첫번째 h2태그를 가져온다
+			h.style.background = "yellow";
+			h.style.color = "white";
+			
+			//querySelectorAll 모든 값 반환 
+			var h3All = document.querySelectorAll("h3");
+			h3All.forEach(i => console.log(i.innerText) + "<br>");
+		}
+		
+	
+	</script>
+</body>
+	
+</html>

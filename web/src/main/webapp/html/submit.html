@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" action="join.jsp" onSubmit="return checkContent()">
+		이름 : <input type="name" id="name"><br>
+		이메일 : <input type="email" id="email"><br>
+		<input type="submit" value="전송">
+	</form>
+	
+	<script>
+		function checkContent(){
+			var name = document.getElementById("name");
+			var email = document.getElementById("email");
+			
+			if(name.value.length <= 1){
+				alert("length");
+				name.focus();
+			}
+			
+			if(name.value == ""){
+				
+				//name.focus();
+			}
+			
+			return false;
+		}
+	</script>
+</body>
+</html>

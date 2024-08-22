@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	주민번호:
+	<input type="text" size=6 maxlength=6 id="jumin1" onkeyup="juminForward()"> - 
+	<input type="text" id="jumin2" onkeyup="juminBackward()">
+	
+	<script>
+		var jumin1 = document.getElementById("jumin1");
+		var jumin2 = document.getElementById("jumin2");
+			
+		function juminForward(){
+			//alert("11");
+			if(jumin1.value.length >= 6){
+				//alert("dsf");
+				jumin2.focus();		
+			}	
+		}
+		
+		function juminBackward(){
+			if(jumin2.value.length > 7){
+				jumin2.value = jumin2.value.slice(0,7);
+			}
+		}
+		
+	</script>
+</body>
+</html>

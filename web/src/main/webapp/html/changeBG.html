@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>화면색이 바뀌넹</h3>
+	<input type="button" value="화면색이 바뀐다" onclick="changeBG()">
+	<input type="button" value="멈춤" onclick="stop()">
+	
+	<script>
+		
+		function changeBG(){
+			var body = document.querySelector("body");
+			
+			var intArr = new Array("yellow","red","green","blue");
+			
+			var date = new Date();
+			var second = date.getSeconds();
+			var num = second%3;
+			
+			body.style.backgroundColor = intArr[num];
+			//document.bgColor = intArr[num];
+			
+			s = setTimeout("changeBG()", 1000);
+		}
+		
+		function stop(){
+			clearTimeout(s);	
+		}
+		
+	</script>
+</body>
+</html>

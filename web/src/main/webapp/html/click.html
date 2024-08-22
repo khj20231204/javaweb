@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form id="myform" method="get" action="send.jsp" onsubmit="return send()">
+		ID : <input type="text" id="id">
+		이름 : <input type="text" id="name">
+		<button>전송</button>
+	</form>
+	
+	<script>
+		function send(){
+			
+			var id = document.getElementById("id");
+			var name = document.getElementById("name");
+			
+			if(id.value == ""){
+				alert("id를 입력하세요");
+				id.focus();
+				return false;
+			}
+			
+			alert(name.value.length);
+			
+			if(name.value == ""){
+				alert("name를 입력하세요");
+				name.focus();
+				return false;
+			}
+			
+		}
+	</script>
+</body>
+</html>
