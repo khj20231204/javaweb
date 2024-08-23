@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var intArr = new Array(23,1,54,6,7,46,13);
+		
+		intArr.sort();
+		console.log(intArr); //[1, 13, 23, 46, 54, 6, 7]
+		
+		intArr.sort((a,b) => a-b);
+		console.log(intArr); //[1, 6, 7, 13, 23, 46, 54]
+		
+		intArr.forEach(i => console.log(i));
+	</script>
+</body>
+</html>

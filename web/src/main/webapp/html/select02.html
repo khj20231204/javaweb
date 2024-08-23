@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<select id="broad" onchange="selectBroad()">
+		<option value="">방송국 선택</option>
+		<option value="http://www.imbc.com">mbc</option>
+		<option value="http://www.kbs.co.kr">kbs</option>
+		<option value="http://www.sbs.co.kr">sbs</option>
+	</select>
+	
+	<script>
+		function selectBroad(){
+			var broad = document.getElementById("broad");
+			
+			location.href = broad.value;
+		}
+	</script>
+</body>
+</html>
