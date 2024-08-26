@@ -91,7 +91,7 @@
 			return false;
 		}
 		// isNaN(): 문자가 포함되면 true를 리턴
-		if(isNaN(jumin1.value)){
+		if(isNaN(jumin1.value)){			//숫자인지 문자인지 검사
 			alert("숫자만 입력 하세요.");
 			jumin1.value = "";
 			jumin1.focus();
@@ -130,7 +130,7 @@
 			tel1.focus();
 			return false;
 		}
-		if(isNaN(tel1.value)){
+		if(isNaN(tel1.value)){			//숫자인지 문자인지 검사
 			alert("숫자만 입력 하세요.");
 			tel1.value = "";
 			tel1.focus();
@@ -179,7 +179,7 @@
 			phone3.focus();
 			return false;
 		}
-		if(isNaN(phone3.value)){
+		if(isNaN(phone3.value)){			
 			alert("숫자만 입력 하세요.");
 			phone3.value = "";
 			phone3.focus();
@@ -222,12 +222,39 @@
 			intro.focus();
 			return false;
 		}
-		
-		//radio 값가져오기
-		
-		//checkbox 값가져오기
-		
-		//select 값가져오기
-		
-		//text박스 slice
 }	
+
+function checkValidate(){
+	
+	//radio 값가져오기
+	var genders = document.getElementsByName("gender");
+	let genderCount = 0;
+	for(var i=0 ; i<genders.length ; i++){
+		if(genders[i].checked){
+			genderValue = genders[i].value;
+			genderCount++;				
+		}
+	}
+	if(genderCount<=0){
+		alert("성별을 선택하세요");
+		return false;
+	}
+	//alert(genderValue);
+	
+	//checkbox 값가져오기
+	var hobbys = document.getElementsByName("hobby");
+	let hobbyCount = 0;
+	
+	var hobbyValue = new Array();
+	for(var i=0 ; i<hobbys.length ; i++){
+		if(hobbys[i].checked){
+			hobbyValue.push(hobbys[i].value);
+			hobbyCount++;				
+		}
+	}
+	if(hobbyCount<=0){
+		alert("취미을 선택하세요");
+		return false;
+	}
+	//hobbyValue.forEach(i => alert(i));
+}
