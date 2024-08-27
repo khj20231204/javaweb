@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		var list = ['야구','축구','농구','배구','수영'];
+	
+		//for문을 돌면서 index값 증가, index에 따라 value값 가져오기
+		$.each(list, function(index, value){
+			console.log("index:"+index);
+			console.log("value:"+value);
+			
+			$('ol').append('<li>' + value + '</li>');
+		});
+	});
+</script>
+</head>
+<body>
+	<ol></ol>
+</body>
+</html>

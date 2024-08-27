@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		$('a1').click(function(){
+			$('img').attr("src","img/flower.jpg");
+		});
+		
+		$('a').click(function(){
+			$('img').attr("src","img/flower.jpg");
+			
+			return false; //a href가 실행 안됨, 화면이 img/sea.jpg로 넘어가는 걸 막음
+		});
+	});
+</script>
+</head>
+<body>
+	<a1 href="#">a1 화면 변경</a1><br><br>
+	<a href="img/sea.jpg">a2 화면 변경</a><br><br>
+	<img src="img/building.jpg">
+</body>
+</html>

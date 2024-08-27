@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		var array = [{name:"naver", link:"http://www.naver.com"},
+				{name:"kakao", link:"http://www.kakao.com"},
+				{name:"google", link:"http://www.google.com"}];
+		
+		var output = "";
+		$.each(array, function(index, value){
+			output += "<a href="+ value.link + "><h1>" + value.name + "</h1></a><br>";
+		});	
+		
+		$('div:first-child').html(output);
+		
+	});
+</script>
+
+<style>
+	a {
+		text-decoration: none;
+	}
+</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+</body>
+</html>

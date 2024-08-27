@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		$('ul #first').css({"color":"red"}).css("fontSize","20px").css("backgroundColor","gray");
+		$('#second').css("color","blue").css("fontWeight","bold")
+		$('ul .third').css("backgroundColor","yellow");
+		$('#fourth, .fifth').css("color","green");
+		$('li:nth-child(6)').css({'color':'orange'});
+		
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li id="first">테스트 테스트 테스트 테스트 테스트</li>
+		<li id="second">테스트 테스트 테스트 테스트 테스트</li>
+		<li class="third">테스트 테스트 테스트 테스트 테스트</li>
+		<li id="fourth">테스트 테스트 테스트 테스트 테스트</li>
+		<li class="fifth">테스트 테스트 테스트 테스트 테스트</li>
+		<li class="sixth">테스트 테스트 테스트 테스트 테스트</li>
+	</ul>
+</body>
+</html>

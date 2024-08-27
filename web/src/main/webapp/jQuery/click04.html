@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		//a태그가 많아 구별이 안되는 경우
+		//eq필터 : 특정 태그 안에서 태그의 순서를 구해주는 필터 선택자
+		$("a:eq(0)").click(function(){
+			$('img').attr("src","img/flower.jpg").attr("title","껏");
+			
+			return false;
+		});
+	
+		$("a:eq(1)").click(function(){
+			$('img').attr("src","img/sea.jpg").attr("title","빠다");
+			
+			return false;
+		});
+		
+		$("a:eq(2)").click(function(){
+			$('img').attr("src","img/Jellyfish.jpg").attr("title","해빠리");
+			
+			return false;
+		});
+		
+		$("a:eq(3)").click(function(){
+			$('img').attr("src","img/building.jpg").attr("title","삘딩");
+			
+			return false;
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li><a href="img/flower.jpg">껏</a></li>
+		<li><a href="img/sea.jpg">빠다</a></li>
+		<li><a href="img/Jellyfish.jpg">해빠리</a></li>
+		<li><a href="img/building.jpg">삘딩</a></li>
+	</ul>	
+	<p><img src="img/flower.jpg" title="꽃"></p>
+</body>
+</html>
