@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		$('form').submit(function(){
+			//정규 표현식
+			var pattern = /^[a-z]+[a-z0-9_]$/;
+			//영문 소문자, 숫자, 언더바만 사용가능
+			var num = /^[0-9]+$/;
+			//+는 1회사용 의무
+			
+			var id = $.trim($('#id').val());
+			var passwd = $.trim($('#passwd').val());
+			
+			var a = document.getElementById("id");
+			console.log(a.value);
+			
+			if(id == ''){
+				alert('ID를 입력 하세요.');
+				$('#id').focus();
+				return false; 
+			}else if(!pattern.test(id)){
+				alert("비밀번호 재설정")
+				return false;
+			}
+			
+			if(passwd == ''){
+				alert('비밀번호를 입력하라');
+				$('passwd').focus();
+				return false;
+			}else if(!num.test(passwd)){
+				alert('비밀번호는 숫자만 가능');
+				$('#passwd').val('').focus();
+				return false;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<form method="post" action="send.jsp">
+		ID : <input type="text" id="id"><br>
+		비밀번호 : <input type="text" id="passwd">	
+		
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#email').change(function(){
+			var v = $(this).val();
+			
+			if(v != ""){
+				$('#domain').val(v).attr('readonly','true');
+				$('#domain').val(v).attr('readonly','readonly');
+			}else{
+				//$('#domain').removeAttr('readonly');
+				$('#domain').val('').focus().attr('readonly',false);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	EMail :
+		<input type="text" size="10" id="mailid">@
+		<input type="text" size="15" id="domain">
+		<select id="email">
+			<option value="">직접입력</option>
+			<option value="naver.com">네이버</option>
+			<option value="daum.net">다음</option>
+			<option value="nate.com">네이트</option>
+			<option value="gamil.com">구글</option>
+		</select>
+</body>
+</html>
