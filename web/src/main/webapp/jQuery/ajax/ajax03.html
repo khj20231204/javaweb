@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table, td { border: 1px solid gray;}
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		$.ajax({
+			url : "item.json",
+			dataType : "json",
+			success : function(data){
+				$("treeData").append("<tr><td>id</td><tr>name</td><td>price</td><td>description</td></tr>");
+				
+				$.each(data, function(){
+					var v =	"<tr><td>" + $(this).id + "</td>" +
+						"    <td>" + $(this).name + "</td>" +
+						"	 <td>" + $(this).price + "</td>" +
+						" 	 <td>" + $(this).description + "</td></tr>";
+						
+					$("#treeData").append(v);
+				});
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<table id="treeData"></table>
+</body>
+</html>

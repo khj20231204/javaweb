@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table td { border : 1px solid gray;}
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#btn").click(function(){
+			
+			$.get('item.xml',
+				function(data){
+					$("#treeData").append(
+							'<tr><td>id</td><td>name</td><td>price</td><td>description<td></tr>'
+							);
+					$(data).find('item').each(function(){
+						
+						var item = $(this);
+						$('#treeData').append(
+						"<tr><td>"+ item.attr('id')+ "</td>" + 
+						"	 <td>" + item.attr('name') + "</td>" +
+						"	 <td>" + this.find('price').text() + "</td>" +
+						"	 <td>" + this.find('description').text() + "</td></tr>"	
+						);
+					});
+			});
+			
+			//$("#msg2").load('item.xml');
+		});
+	});
+</script>
+</head>
+<body>
+	<button type="button" id="btn">get으로 얻어오기</button>
+	<div id="msg"></div>
+	<div id="msg2"></div>
+	
+	<table id="treeData"></table>
+</body>
+</html>
