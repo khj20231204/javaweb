@@ -4,6 +4,9 @@
 <%
 	String id = request.getParameter("id");
 	String passwd = request.getParameter("passwd");
+	
+	//id는 string형
+	out.print(id); //형변환
 %>    
 
 ID : <%=id %> <br>
